@@ -1,15 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Calculator
+        System.out.println("Calculator пример:");
+        System.out.println("Сумма: " + Calculator.sum(5, 3.2));
+        System.out.println("Умножение: " + Calculator.multiply(5, 3.2));
+        System.out.println("Деление: " + Calculator.divide(10, 2.5));
+        System.out.println("Вычетание: " + Calculator.subtract(9, 2));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // compareArrays
+        System.out.println("\ncompareArrays пример:");
+        Integer[] arr1 = {1, 2, 3};
+        Integer[] arr2 = {1, 2, 3};
+        System.out.println("Массивы равны: " + Utils.compareArrays(arr1, arr2));
+
+        String[] arr3 = {"a", "b"};
+        String[] arr4 = {"a", "c"};
+        System.out.println("Массивы равны: " + Utils.compareArrays(arr3, arr4));
+
+        // Pair
+        System.out.println("\nPair пример:");
+        Pair<Integer, String> pair = new Pair<>(1, "Привет");
+        System.out.println("Первая: " + pair.getFirst());
+        System.out.println("Вторая: " + pair.getSecond());
+        System.out.println(pair);
     }
 }
